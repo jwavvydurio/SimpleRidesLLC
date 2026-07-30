@@ -52,3 +52,7 @@ This is a curated portfolio copy, not the production repository. Names, screens,
 **SimpleRides LLC — Founder / Product Developer**  
 Designed and developed a responsive mobility platform prototype combining vehicle-access workflows, driver verification, route assistance, mileage rewards, and owner administration.
 
+## More portfolio work
+
+- [Akina Atelier — cinematic React commerce experience](https://github.com/jwavvydurio/Akina-Atelier)
+- [Full GitHub profile](https://github.com/jwavvydurio)
