@@ -1,0 +1,241 @@
+{
+  "name": "SimpleRides Facade Kit V1",
+  "version": 1,
+  "format": "glTF 2.0 / GLB",
+  "units": "meters",
+  "modules": [
+    {
+      "name": "FacadeKit_WindowBay",
+      "dimensionsMeters": [
+        1,
+        1,
+        1
+      ],
+      "material": "PBR blue-gray facade glass"
+    },
+    {
+      "name": "FacadeKit_EntryDoor",
+      "dimensionsMeters": [
+        1,
+        1,
+        1
+      ],
+      "material": "PBR smoked entry glass"
+    },
+    {
+      "name": "FacadeKit_Canopy",
+      "dimensionsMeters": [
+        1,
+        1,
+        1
+      ],
+      "material": "PBR charcoal canopy metal"
+    },
+    {
+      "name": "FacadeKit_BrickPanel",
+      "dimensionsMeters": [
+        1,
+        1,
+        1
+      ],
+      "material": "PBR Austin warm brick"
+    },
+    {
+      "name": "FacadeKit_LimestonePanel",
+      "dimensionsMeters": [
+        1,
+        1,
+        1
+      ],
+      "material": "PBR Austin limestone"
+    },
+    {
+      "name": "FacadeKit_WoodPanel",
+      "dimensionsMeters": [
+        1,
+        1,
+        1
+      ],
+      "material": "PBR warm wood siding"
+    },
+    {
+      "name": "FacadeKit_ConcretePanel",
+      "dimensionsMeters": [
+        1,
+        1,
+        1
+      ],
+      "material": "PBR architectural concrete"
+    },
+    {
+      "name": "FacadeKit_Mullion",
+      "dimensionsMeters": [
+        1,
+        1,
+        1
+      ],
+      "material": "PBR light steel mullion"
+    },
+    {
+      "name": "FacadeKit_GarageDoor",
+      "dimensionsMeters": [
+        1,
+        1,
+        1
+      ],
+      "material": "PBR residential garage door"
+    },
+    {
+      "name": "FacadeKit_Porch",
+      "dimensionsMeters": [
+        1,
+        1,
+        1
+      ],
+      "material": "PBR residential porch"
+    },
+    {
+      "name": "FacadeKit_Driveway",
+      "dimensionsMeters": [
+        1,
+        1,
+        1
+      ],
+      "material": "PBR driveway concrete"
+    },
+    {
+      "name": "FacadeKit_GableRoofCharcoal",
+      "dimensionsMeters": [
+        1,
+        1,
+        1
+      ],
+      "material": "PBR charcoal residential roof"
+    },
+    {
+      "name": "FacadeKit_GableRoofTerracotta",
+      "dimensionsMeters": [
+        1,
+        1,
+        1
+      ],
+      "material": "PBR terracotta residential roof"
+    },
+    {
+      "name": "FacadeKit_HipRoofCharcoal",
+      "dimensionsMeters": [
+        1,
+        1,
+        1
+      ],
+      "material": "PBR charcoal residential roof"
+    },
+    {
+      "name": "FacadeKit_HipRoofTerracotta",
+      "dimensionsMeters": [
+        1,
+        1,
+        1
+      ],
+      "material": "PBR terracotta residential roof"
+    },
+    {
+      "name": "FacadeKit_TowerWindowBay",
+      "dimensionsMeters": [
+        1,
+        1,
+        1
+      ],
+      "material": "PBR blue-gray tower glass"
+    },
+    {
+      "name": "FacadeKit_TowerLobbyGlass",
+      "dimensionsMeters": [
+        1,
+        1,
+        1
+      ],
+      "material": "PBR clear tower lobby glass"
+    },
+    {
+      "name": "FacadeKit_TowerSpandrel",
+      "dimensionsMeters": [
+        1,
+        1,
+        1
+      ],
+      "material": "PBR charcoal tower spandrel"
+    },
+    {
+      "name": "FacadeKit_TowerColumn",
+      "dimensionsMeters": [
+        1,
+        1,
+        1
+      ],
+      "material": "PBR pale tower structural column"
+    },
+    {
+      "name": "FacadeKit_MidriseWindowBand",
+      "dimensionsMeters": [
+        1,
+        1,
+        1
+      ],
+      "material": "PBR mid-rise blue-gray window band"
+    },
+    {
+      "name": "FacadeKit_MasonryPier",
+      "dimensionsMeters": [
+        1,
+        1,
+        1
+      ],
+      "material": "PBR warm limestone facade pier"
+    },
+    {
+      "name": "FacadeKit_BalconySlab",
+      "dimensionsMeters": [
+        1,
+        1,
+        1
+      ],
+      "material": "PBR pale concrete balcony slab"
+    },
+    {
+      "name": "FacadeKit_BalconyRail",
+      "dimensionsMeters": [
+        1,
+        1,
+        1
+      ],
+      "material": "PBR charcoal balcony rail"
+    },
+    {
+      "name": "FacadeKit_StorefrontFrame",
+      "dimensionsMeters": [
+        1,
+        1,
+        1
+      ],
+      "material": "PBR dark storefront frame"
+    },
+    {
+      "name": "FacadeKit_TowerCrownBand",
+      "dimensionsMeters": [
+        1,
+        1,
+        1
+      ],
+      "material": "PBR tower crown band"
+    }
+  ],
+  "runtimeRules": {
+    "maximumBuildings": 48,
+    "maximumInstances": 1100,
+    "protectedMapboxBuildings": "skip",
+    "placement": "real published footprint exterior edges",
+    "lod": "zoom >= 15.2",
+    "fullBuildingMeshes": false
+  }
+}

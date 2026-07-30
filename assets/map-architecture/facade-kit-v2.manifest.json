@@ -1,0 +1,314 @@
+{
+  "name": "SimpleRides Facade Kit V2",
+  "version": 2,
+  "format": "glTF 2.0 / GLB",
+  "units": "meters",
+  "axis": "Y-up",
+  "lodLevels": [
+    0,
+    1,
+    2
+  ],
+  "modules": [
+    {
+      "name": "FacadeKit_WindowBay",
+      "materialKind": "glass",
+      "lods": [
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "name": "FacadeKit_EntryDoor",
+      "materialKind": "glass",
+      "lods": [
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "name": "FacadeKit_Canopy",
+      "materialKind": "metal",
+      "lods": [
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "name": "FacadeKit_BrickPanel",
+      "materialKind": "brick",
+      "lods": [
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "name": "FacadeKit_LimestonePanel",
+      "materialKind": "stone",
+      "lods": [
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "name": "FacadeKit_WoodPanel",
+      "materialKind": "wood",
+      "lods": [
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "name": "FacadeKit_ConcretePanel",
+      "materialKind": "concrete",
+      "lods": [
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "name": "FacadeKit_Mullion",
+      "materialKind": "metal",
+      "lods": [
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "name": "FacadeKit_GarageDoor",
+      "materialKind": "concrete",
+      "lods": [
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "name": "FacadeKit_Porch",
+      "materialKind": "wood",
+      "lods": [
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "name": "FacadeKit_Driveway",
+      "materialKind": "concrete",
+      "lods": [
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "name": "FacadeKit_GableRoofCharcoal",
+      "materialKind": "roof",
+      "lods": [
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "name": "FacadeKit_GableRoofTerracotta",
+      "materialKind": "terracotta",
+      "lods": [
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "name": "FacadeKit_HipRoofCharcoal",
+      "materialKind": "roof",
+      "lods": [
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "name": "FacadeKit_HipRoofTerracotta",
+      "materialKind": "terracotta",
+      "lods": [
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "name": "FacadeKit_TowerWindowBay",
+      "materialKind": "glass",
+      "lods": [
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "name": "FacadeKit_TowerWindowGrid",
+      "materialKind": "glass",
+      "lods": [
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "name": "FacadeKit_TowerMullionGrid",
+      "materialKind": "trim",
+      "lods": [
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "name": "FacadeKit_TowerLobbyGlass",
+      "materialKind": "glass",
+      "lods": [
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "name": "FacadeKit_TowerSpandrel",
+      "materialKind": "metal",
+      "lods": [
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "name": "FacadeKit_TowerColumn",
+      "materialKind": "stone",
+      "lods": [
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "name": "FacadeKit_MidriseWindowBand",
+      "materialKind": "glass",
+      "lods": [
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "name": "FacadeKit_MidriseWindowGrid",
+      "materialKind": "glass",
+      "lods": [
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "name": "FacadeKit_MidriseMullionGrid",
+      "materialKind": "trim",
+      "lods": [
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "name": "FacadeKit_LowriseWindowGrid",
+      "materialKind": "glass",
+      "lods": [
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "name": "FacadeKit_LowriseMullionGrid",
+      "materialKind": "trim",
+      "lods": [
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "name": "FacadeKit_ParkingOpeningGrid",
+      "materialKind": "metal",
+      "lods": [
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "name": "FacadeKit_MasonryPier",
+      "materialKind": "stone",
+      "lods": [
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "name": "FacadeKit_BalconySlab",
+      "materialKind": "concrete",
+      "lods": [
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "name": "FacadeKit_BalconyRail",
+      "materialKind": "metal",
+      "lods": [
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "name": "FacadeKit_StorefrontFrame",
+      "materialKind": "metal",
+      "lods": [
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "name": "FacadeKit_TowerCrownBand",
+      "materialKind": "metal",
+      "lods": [
+        0,
+        1,
+        2
+      ]
+    }
+  ],
+  "modelDirectory": "assets/map-architecture/facade-kit-v2-models",
+  "nativeMapboxModelLayers": true,
+  "textures": "Material-authored glTF modules with Mapbox lighting, shadows, and ambient occlusion",
+  "runtimeRules": {
+    "protectedMapboxBuildings": "skip-authoritative-registry",
+    "placement": "published footprint exterior faces",
+    "fullBuildingMeshes": false,
+    "renderer": "Mapbox GL JS native model layer",
+    "lod0": "close architecture view",
+    "lod1": "navigation view",
+    "lod2": "wide/mobile view"
+  }
+}

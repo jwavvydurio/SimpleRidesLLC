@@ -2,57 +2,85 @@
 
 An independent mobility-product prototype designed around weekly vehicle access, driver verification, trip support, mileage rewards, and owner operations.
 
-This public repository is a recruiter-friendly showcase. It contains selected front-end work and product visuals from the larger private application while intentionally excluding credentials, customer information, payment configuration, private business records, and production infrastructure.
+This public repository is a recruiter-friendly showcase. It contains selected front-end and map-architecture work from the larger private application while intentionally excluding credentials, customer information, payment configuration, private business records, and production infrastructure.
+
+## Latest interface
+
+The current interface presents the SimpleRides product as an interactive neighborhood. Drivers, fleet access, verification, rewards, marketplace tools, and owner operations become visible destinations instead of disconnected dashboard pages.
+
+![Latest SimpleRides neighborhood interface](docs/images/new-neighborhood-interface.png)
+
+### Mobile experience
+
+![Latest SimpleRides mobile interface](docs/images/new-neighborhood-mobile.png)
+
+## New Austin map architecture
+
+The new map prototype uses Mapbox GL JS with native model layers, Austin building context, GPS replay, camera controls, facade-model placement, and explicit performance budgets.
+
+![Latest SimpleRides Austin map architecture](docs/images/new-map-architecture.png)
 
 ## Product highlights
 
 - Responsive driver and customer experiences
 - Interactive neighborhood-style product navigation
-- Route, delivery, rideshare, and mileage-reward concepts
-- Fleet, verification, wallet, marketplace, and owner-operation flows
+- Mapbox-powered Austin map and GPS replay prototype
+- Native 3D facade models with multiple levels of detail
+- Fleet, verification, rewards, marketplace, and owner-operation flows
 - Mobile-conscious interface design with accessible controls
-
-## Selected interface
-
-![SimpleRides route interface](docs/images/route-interface.png)
-
-![SimpleRides driver rewards hub](docs/images/driver-rewards-hub.png)
 
 ## Technology demonstrated
 
-- Semantic HTML
-- Modern CSS and responsive layouts
-- JavaScript state and interaction design
-- SVG interface graphics
-- Product prototyping and workflow design
-- Vite-based development in the private production workspace
+- Semantic HTML, modern CSS, and JavaScript
+- Mapbox GL JS 3D maps
+- glTF/GLB facade-model assets and native model layers
+- Responsive layouts and SVG interface graphics
+- Deterministic GPS replay and live-location filtering
+- Performance budgets and visual-regression test design
+- Vite development and production builds
+
+## Run locally
+
+```powershell
+npm install
+Copy-Item .env.example .env
+npm run dev
+```
+
+Add your own Mapbox public token to `.env` to load the Austin map:
+
+```text
+VITE_MAPBOX_TOKEN=your_public_mapbox_token
+```
+
+Then explore:
+
+- `http://localhost:5173/` - showcase index
+- `http://localhost:5173/demo/` - neighborhood interface
+- `http://localhost:5173/map-architecture-mock.html` - Austin map architecture
 
 ## Explore the code
 
-The `demo` folder contains a selected interactive neighborhood interface. The visual assets it uses are in `assets/neighborhood`.
-
-To view it locally:
-
-```powershell
-python -m http.server 8000
-```
-
-Then open `http://localhost:8000/demo/`.
+- `demo/` contains the responsive neighborhood interface.
+- `src/map-architecture/` contains map controls, GPS handling, terrain behavior, facade styling, and performance budgets.
+- `assets/map-architecture/` contains the selected facade runtime and 3D model kit.
+- `map-architecture-mock.html` is the new map entry point.
 
 ## My contribution
 
-I developed the product concept, user flows, interface direction, and working web prototype, using AI-assisted development tools as part of the implementation workflow. I also designed operational safeguards around verification, privacy, owner approval, and staged feature rollout.
+I developed the product concept, user flows, interface direction, and working web prototypes, using AI-assisted development tools as part of the implementation workflow. I also designed operational safeguards around verification, privacy, owner approval, location quality, and staged feature rollout.
 
 ## Repository scope
 
-This is a curated portfolio copy, not the production repository. Names, screens, and workflows are shown for professional evaluation. No real customer records or secrets are included.
+This is a curated portfolio copy, not the production repository. Names, screens, and workflows are shown for professional evaluation. No real customer records, private keys, or production tokens are included.
 
 ## Resume summary
 
-**SimpleRides LLC — Founder / Product Developer**  
-Designed and developed a responsive mobility platform prototype combining vehicle-access workflows, driver verification, route assistance, mileage rewards, and owner administration.
+**SimpleRides LLC - Founder / Product Developer**  
+Designed and developed a responsive mobility platform prototype combining vehicle-access workflows, driver verification, route assistance, mileage rewards, owner administration, and a Mapbox-based 3D Austin navigation environment.
 
 ## More portfolio work
 
-- [Akina Atelier — cinematic React commerce experience](https://github.com/jwavvydurio/Akina-Atelier)
+- [Akina Atelier - cinematic React commerce experience](https://github.com/jwavvydurio/Akina-Atelier)
 - [Full GitHub profile](https://github.com/jwavvydurio)
+
