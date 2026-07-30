@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SimpleRides Go Live Sim-City Architecture Mock</title>
+  <link rel="stylesheet" href="/src/map-architecture/mock-app.css">
+  <script type="module" src="/maps-config.js"></script>
+
+</head>
+<body>
+  <div id="map"></div>
+
+  <section class="mock-panel" aria-label="Mock status">
+    <span>Mock only</span>
+    <strong>Full Austin Go Live Sim-city architecture renderer</strong>
+    <p id="status">Mapbox-native architecture models always on. Loading the latest mock progress...</p>
+    <div class="src-skin-badge" id="srcSkinBadge"><i></i><span>Mapbox Native Architecture</span></div>
+    <div class="mock-actions">
+      <button id="resetView" type="button">Reset view</button>
+    </div>
+  </section>
+
+  <nav class="map-controls" aria-label="Mock map controls">
+    <button id="optimizeMap" class="optimize-button" type="button" title="Optimize map render" aria-label="Optimize architecture coverage">Optimize</button>
+    <button id="zoomIn" type="button" title="Zoom in" aria-label="Zoom in">+</button>
+    <button id="zoomOut" type="button" title="Zoom out" aria-label="Zoom out">-</button>
+    <button id="rotateLeft" type="button" title="Rotate left" aria-label="Rotate left">&#8634;</button>
+    <button id="rotateRight" type="button" title="Rotate right" aria-label="Rotate right">&#8635;</button>
+    <button id="tiltUp" type="button" title="Tilt up" aria-label="Tilt camera up">&#8593;</button>
+    <button id="tiltDown" type="button" title="Tilt down" aria-label="Tilt camera down">&#8595;</button>
+  </nav>
+
+  <aside class="location-card">
+    <b>Go Live Location</b>
+    <span id="locationReadout">Austin, TX default Go Live center. Browser GPS can replace this when allowed.</span>
+    <span id="featureReadout">Mapbox feature identity: move over real Austin places/buildings.</span>
+    <span id="skinReadout">Skin source: Mapbox Standard 3D + allowed Mapbox/OpenStreetMap-derived data.</span>
+  </aside>
+
+  <aside class="progress-card" aria-label="Mock progress">
+    <div class="progress-header">
+      <b>Mock Progress</b>
+      <button id="toggleProgress" class="progress-toggle" type="button" aria-expanded="true" aria-controls="progressDetails">Hide</button>
+    </div>
+    <div id="progressCompactSummary" aria-live="polite">Loading architecture status...</div>
+    <div id="progressSummary">Completed: Mapbox Austin base, protected detailed buildings, replacement rule, footprint skin, cache guards, runtime watchdog.</div>
+    <div id="progressDetails" class="progress-grid">
+      <span><em>Built</em><strong id="progressBuilt">Waiting for map...</strong></span>
+      <span><em>Protected</em><strong id="progressProtected">Waiting</strong></span>
+      <span><em>Active</em><strong id="progressActive">Starting</strong></span>
+      <span><em>Next</em><strong id="progressNext">Architecture accuracy + speed</strong></span>
+      <span><em>Integrity</em><strong id="progressIntegrity">Auditing</strong></span>
+      <span><em>Profiles</em><strong id="progressProfiles">Loading</strong></span>
+      <span><em>Health</em><strong id="progressHealth">Starting</strong></span>
+      <span><em>Source</em><strong id="progressSource">Connecting</strong></span>
+      <span><em>Native models (always on)</em><strong id="progressFacadeKit">Loading models</strong></span>
+    </div>
+    <div id="progressApproval">Approval needed before applying any mock skin to real Go Live.</div>
+    <div id="productionPackage">Production package: waiting for mock audit.</div>
+    <div id="optimizeStatusLine">Optimize: ready</div>
+    <div id="latestBuildZones">Built: none yet</div>
+    <div id="publishChecklist">Publish check: loading...</div>
+    <div id="optimizeDirective">Optimize directive: loading...</div>
+  </aside>
+
+  <div class="map-hint">Drag the Mapbox Austin map directly. Use wheel or the controls to zoom, rotate, and tilt. This mock keeps the official layout and applies Sim-style visual treatment only.</div>
+
+  <script type="module" src="/src/map-architecture/mock-bootstrap.js"></script>
+</body>
+</html>

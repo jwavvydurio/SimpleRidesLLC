@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#071311">
+  <meta name="description" content="Explore the SimpleRides business as an interactive Austin neighborhood.">
+  <title>SimpleRides Neighborhood</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./neighborhood.css">
+</head>
+<body>
+  <svg class="icon-sprite" aria-hidden="true">
+    <symbol id="icon-neighborhood" viewBox="0 0 24 24"><path d="M3 11.2 12 3l9 8.2"/><path d="M5.5 9.5V21h13V9.5M9 21v-7h6v7"/></symbol>
+    <symbol id="icon-car" viewBox="0 0 24 24"><path d="m5 11 1.7-4.4A2 2 0 0 1 8.6 5h6.8a2 2 0 0 1 1.9 1.6L19 11"/><path d="M4 11h16a1 1 0 0 1 1 1v5H3v-5a1 1 0 0 1 1-1ZM5 17v2M19 17v2"/><circle cx="7" cy="14" r=".6"/><circle cx="17" cy="14" r=".6"/></symbol>
+    <symbol id="icon-verify" viewBox="0 0 24 24"><path d="M12 3 4.5 6v5.5c0 4.7 3.2 8.4 7.5 9.5 4.3-1.1 7.5-4.8 7.5-9.5V6L12 3Z"/><path d="m8.5 12 2.2 2.2 4.8-5"/></symbol>
+    <symbol id="icon-route" viewBox="0 0 24 24"><path d="M5 19c0-7 14-3 14-10a4 4 0 0 0-8 0c0 7 8 3 8 10"/><circle cx="5" cy="19" r="2"/><circle cx="19" cy="19" r="2"/></symbol>
+    <symbol id="icon-market" viewBox="0 0 24 24"><path d="M4 9h16l-1-5H5L4 9Z"/><path d="M5 9v11h14V9M9 20v-6h6v6"/><path d="M4 9c0 1.6 2.7 2.2 4 0 1.3 2.2 3.7 2.2 5 0 1.3 2.2 3.7 2.2 5 0 1.3 2.2 3 1.6 3 0"/></symbol>
+    <symbol id="icon-owner" viewBox="0 0 24 24"><circle cx="12" cy="8" r="3"/><path d="M5 21v-2a7 7 0 0 1 14 0v2M18 4v4M16 6h4"/></symbol>
+    <symbol id="icon-home" viewBox="0 0 24 24"><path d="M3 11.2 12 3l9 8.2M5.5 9.5V21h13V9.5"/></symbol>
+    <symbol id="icon-help" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M9.7 9a2.5 2.5 0 1 1 3.5 2.3c-.8.4-1.2 1-1.2 1.7v.3M12 17h.01"/></symbol>
+    <symbol id="icon-close" viewBox="0 0 24 24"><path d="m5 5 14 14M19 5 5 19"/></symbol>
+    <symbol id="icon-chevron" viewBox="0 0 24 24"><path d="m9 5 7 7-7 7"/></symbol>
+    <symbol id="icon-compass" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="m15.5 8.5-2.1 4.9-4.9 2.1 2.1-4.9 4.9-2.1Z"/></symbol>
+    <symbol id="icon-location" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><circle cx="12" cy="12" r="8"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2"/></symbol>
+    <symbol id="icon-cube" viewBox="0 0 24 24"><path d="m12 3 8 4.5v9L12 21l-8-4.5v-9L12 3Z"/><path d="m4.3 7.7 7.7 4.4 7.7-4.4M12 12v9"/></symbol>
+    <symbol id="icon-zoom-in" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+    <symbol id="icon-zoom-out" viewBox="0 0 24 24"><path d="M5 12h14"/></symbol>
+    <symbol id="icon-settings" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.9l.1.1-2.8 2.8-.1-.1a1.7 1.7 0 0 0-1.9-.3 1.7 1.7 0 0 0-1 1.6v.2h-4V21a1.7 1.7 0 0 0-1-1.6 1.7 1.7 0 0 0-1.9.3l-.1.1L4.2 17l.1-.1a1.7 1.7 0 0 0 .3-1.9A1.7 1.7 0 0 0 3 14H2.8v-4H3a1.7 1.7 0 0 0 1.6-1 1.7 1.7 0 0 0-.3-1.9L4.2 7 7 4.2l.1.1a1.7 1.7 0 0 0 1.9.3A1.7 1.7 0 0 0 10 3V2.8h4V3a1.7 1.7 0 0 0 1 1.6 1.7 1.7 0 0 0 1.9-.3l.1-.1L19.8 7l-.1.1a1.7 1.7 0 0 0-.3 1.9 1.7 1.7 0 0 0 1.6 1h.2v4H21a1.7 1.7 0 0 0-1.6 1Z"/></symbol>
+  </svg>
+
+  <main class="neighborhood-app">
+    <aside class="side-rail" aria-label="SimpleRides sections">
+      <a class="brand" href="../#fleet" aria-label="SimpleRides home">
+        <span class="brand-mark" aria-hidden="true"><b>S</b><i>R</i></span>
+        <span>SimpleRides</span>
+      </a>
+      <nav class="rail-nav">
+        <button class="rail-button active" type="button" data-destination="garage">
+          <svg><use href="#icon-neighborhood"/></svg><span>Neighborhood</span>
+        </button>
+        <button class="rail-button" type="button" data-destination="garage">
+          <svg><use href="#icon-car"/></svg><span>Fleet</span>
+        </button>
+        <button class="rail-button" type="button" data-destination="drivers">
+          <svg><use href="#icon-home"/></svg><span>Drivers</span>
+        </button>
+        <button class="rail-button" type="button" data-destination="rewards">
+          <svg><use href="#icon-route"/></svg><span>Routes</span>
+        </button>
+        <button class="rail-button" type="button" data-destination="marketplace">
+          <svg><use href="#icon-market"/></svg><span>Wallet</span>
+        </button>
+        <button class="rail-button" type="button" data-destination="marketplace">
+          <svg><use href="#icon-market"/></svg><span>Marketplace</span>
+        </button>
+        <button class="rail-button" type="button" data-destination="baymax">
+          <svg><use href="#icon-help"/></svg><span>BayMax Help</span>
+        </button>
+      </nav>
+      <button class="rail-button rail-settings" type="button" id="resetView">
+        <svg><use href="#icon-settings"/></svg><span>Reset view</span>
+      </button>
+    </aside>
+
+    <section class="world-shell">
+      <header class="top-bar">
+        <div>
+          <button class="mobile-brand" type="button" id="mobileMenu" aria-label="Open navigation">
+            <span class="brand-mark" aria-hidden="true"><b>S</b><i>R</i></span>
+          </button>
+          <h1>SimpleRides Neighborhood</h1>
+        </div>
+        <div class="top-actions">
+          <button class="identity-button" type="button" data-destination="drivers">
+            <span class="identity-avatar" id="identityAvatar">G</span>
+            <span id="identityName">Guest Driver</span>
+            <svg><use href="#icon-chevron"/></svg>
+          </button>
+          <button class="explore-button" type="button" id="exploreButton" aria-label="Explore neighborhood">
+            <svg><use href="#icon-compass"/></svg>
+            <span>Explore</span>
+          </button>
+        </div>
+      </header>
+
+      <div class="world-viewport" id="worldViewport" aria-label="Interactive cinematic SimpleRides neighborhood">
+        <div class="environment-stage" id="environmentStage" aria-hidden="true">
+          <svg class="route-overlay" id="routeOverlay" viewBox="0 0 1536 1024" preserveAspectRatio="xMidYMid slice">
+            <defs>
+              <mask id="routeOcclusionMask" maskUnits="userSpaceOnUse" x="0" y="0" width="1536" height="1024">
+                <rect x="0" y="0" width="1536" height="1024" fill="white"/>
+                <ellipse cx="520" cy="700" rx="38" ry="44" fill="black"/>
+              </mask>
+            </defs>
+            <image class="environment-image" href="../assets/neighborhood/simplerides-neighborhood-cinematic-clean-v2.png" x="0" y="0" width="1536" height="1024"/>
+            <g class="route-graphics" mask="url(#routeOcclusionMask)">
+              <path class="route-shadow" id="activeRouteShadow"/>
+              <path class="route-line" id="activeRoutePath"/>
+              <g class="route-destination-pin" id="routeDestinationPin">
+                <path d="M0,-19 C-9,-19 -15,-12 -15,-3 C-15,8 0,22 0,22 C0,22 15,8 15,-3 C15,-12 9,-19 0,-19 Z"/>
+                <circle cy="-4" r="5"/>
+              </g>
+              <g class="route-vehicle" id="routeVehicle">
+                <g id="routeVehicleArtwork">
+                  <ellipse class="route-vehicle-shadow" cx="-2" cy="6" rx="34" ry="17"/>
+                  <image class="route-vehicle-image" href="../assets/neighborhood/c300-aerial-cutout-v2.png" x="-45" y="-31" width="90" height="62" preserveAspectRatio="xMidYMid meet"/>
+                </g>
+              </g>
+            </g>
+          </svg>
+          <div class="garage-focus"></div>
+          <div class="cinematic-vignette"></div>
+        </div>
+        <div class="world-hint" id="worldHint">Move to look around · Scroll to zoom · Select a destination</div>
+        <div class="map-labels" id="mapLabels" aria-label="Neighborhood destinations"></div>
+
+        <div class="world-controls" aria-label="Map view controls">
+          <button type="button" id="focusSelected" aria-label="Focus selected destination"><svg><use href="#icon-location"/></svg></button>
+          <button type="button" id="zoomIn" aria-label="Zoom in"><svg><use href="#icon-zoom-in"/></svg></button>
+          <button type="button" id="zoomOut" aria-label="Zoom out"><svg><use href="#icon-zoom-out"/></svg></button>
+          <button type="button" id="toggleView" aria-label="Toggle view angle"><svg><use href="#icon-cube"/></svg></button>
+        </div>
+
+        <nav class="destination-dock" aria-label="Neighborhood destinations">
+          <button class="dock-button active" type="button" data-destination="garage">
+            <svg><use href="#icon-car"/></svg><span>Garage</span>
+          </button>
+          <button class="dock-button" type="button" data-destination="verify">
+            <svg><use href="#icon-verify"/></svg><span>Verify</span>
+          </button>
+          <button class="dock-button" type="button" data-destination="rewards">
+            <svg><use href="#icon-route"/></svg><span>Rewards</span>
+          </button>
+          <button class="dock-button" type="button" data-destination="marketplace">
+            <svg><use href="#icon-market"/></svg><span>Marketplace</span>
+          </button>
+          <button class="dock-button" type="button" data-destination="owner">
+            <svg><use href="#icon-owner"/></svg><span>Owner Ops</span>
+          </button>
+        </nav>
+
+        <aside class="detail-panel" id="detailPanel" aria-live="polite">
+          <button class="panel-close" type="button" id="closePanel" aria-label="Close details"><svg><use href="#icon-close"/></svg></button>
+          <div class="detail-heading">
+            <div class="detail-icon" id="detailIcon"><svg><use href="#icon-car"/></svg></div>
+            <div>
+              <h2 id="detailTitle">SimpleRides Garage</h2>
+              <p id="detailKicker">Fleet &amp; vehicle access</p>
+              <span class="open-status"><i></i><span id="detailStatus">Available now</span></span>
+            </div>
+          </div>
+          <div class="vehicle-preview" id="vehiclePreview">
+            <img src="../assets/neighborhood/c300-studio-front-v1.png" alt="White 2017 Mercedes-Benz C300">
+          </div>
+          <div class="detail-content">
+            <h3 id="detailName">2017 Mercedes-Benz C300</h3>
+            <p id="detailDescription">The selected premium weekly-access vehicle. Final access follows verification and owner approval.</p>
+            <dl id="detailFacts">
+              <div><dt>Status</dt><dd>Available</dd></div>
+              <div><dt>Access</dt><dd>Weekly · Austin, TX</dd></div>
+            </dl>
+          </div>
+          <div class="panel-actions">
+            <a class="panel-action primary" id="primaryAction" href="../#fleet">View Fleet <svg><use href="#icon-chevron"/></svg></a>
+            <a class="panel-action secondary" id="secondaryAction" href="../#apply">Verify to Drive <svg><use href="#icon-chevron"/></svg></a>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <script type="module" src="./neighborhood.js"></script>
+</body>
+</html>
