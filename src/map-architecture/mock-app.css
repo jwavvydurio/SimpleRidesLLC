@@ -1,0 +1,536 @@
+:root {
+  color-scheme: dark;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: #06100d;
+  color: #f8fff7;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  overflow: hidden;
+  background: #06100d;
+}
+
+#map {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+#map {
+  background: #38474b;
+  opacity: 1;
+  filter: none;
+}
+
+.mock-panel {
+  position: fixed;
+  left: 18px;
+  top: 18px;
+  z-index: 5;
+  display: grid;
+  gap: 6px;
+  width: min(310px, calc(100vw - 36px));
+  border: 1px solid rgba(247, 255, 249, 0.18);
+  border-radius: 8px;
+  padding: 10px;
+  background:
+    linear-gradient(135deg, rgba(174, 255, 78, 0.08), rgba(64, 180, 160, 0.12)),
+    rgba(3, 11, 10, 0.78);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.12),
+    0 24px 70px rgba(0, 0, 0, 0.42);
+  backdrop-filter: blur(18px) saturate(1.12);
+}
+
+.mock-panel span {
+  color: rgba(166, 244, 222, 0.9);
+  font-size: 0.72rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.mock-panel strong {
+  font-size: 0.82rem;
+  line-height: 1.15;
+}
+
+.mock-panel p {
+  margin: 0;
+  color: rgba(235, 255, 244, 0.78);
+  font-size: 0.68rem;
+  line-height: 1.25;
+  max-width: 28ch;
+}
+
+.src-skin-badge {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  width: fit-content;
+  min-height: 24px;
+  padding: 4px 8px;
+  border: 1px solid rgba(183, 255, 60, 0.28);
+  border-radius: 6px;
+  background: rgba(4, 19, 16, 0.72);
+  color: #eaffd4;
+  font-size: 0.62rem;
+  font-weight: 800;
+}
+
+.src-skin-badge i {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #b7ff3c;
+  box-shadow: 0 0 9px rgba(183, 255, 60, 0.68);
+}
+
+.mock-actions {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 4px;
+}
+
+.parity-control {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3px;
+  width: 100%;
+  padding: 3px;
+  border: 1px solid rgba(178, 255, 91, 0.26);
+  border-radius: 7px;
+  background: rgba(4, 12, 12, 0.72);
+}
+
+.parity-control button {
+  min-width: 0;
+  padding: 8px 9px;
+  border-color: transparent;
+  background: transparent;
+  color: rgba(235, 255, 244, 0.72);
+  font-size: 0.66rem;
+}
+
+.parity-control button[aria-pressed="true"] {
+  border-color: rgba(178, 255, 91, 0.42);
+  background: #b2ff5b;
+  color: #102010;
+}
+
+button {
+  appearance: none;
+  border: 1px solid rgba(174, 255, 78, 0.32);
+  border-radius: 8px;
+  padding: 7px 10px;
+  color: #f8fff7;
+  background: rgba(11, 24, 21, 0.9);
+  font: inherit;
+  font-size: 0.7rem;
+  font-weight: 900;
+  letter-spacing: 0;
+  cursor: pointer;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+button:hover {
+  border-color: rgba(174, 255, 78, 0.58);
+  background: rgba(18, 38, 32, 0.94);
+}
+
+.location-card {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  z-index: 5;
+  width: min(285px, calc(100vw - 36px));
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 8px;
+  padding: 9px 10px;
+  background: rgba(3, 11, 10, 0.76);
+  backdrop-filter: blur(16px);
+  color: rgba(235, 255, 244, 0.8);
+  font-size: 0.68rem;
+  line-height: 1.25;
+}
+
+.location-card b {
+  display: block;
+  margin-bottom: 3px;
+  color: #f8fff7;
+  font-size: 0.68rem;
+  text-transform: uppercase;
+}
+
+.location-card span {
+  display: block;
+  overflow: hidden;
+  color: rgba(235, 255, 244, 0.72);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.location-card span + span {
+  margin-top: 2px;
+}
+
+.map-controls {
+  position: fixed;
+  right: 18px;
+  top: 18px;
+  z-index: 6;
+  display: grid;
+  gap: 8px;
+  width: 48px;
+}
+
+.map-controls button {
+  width: 48px;
+  height: 44px;
+  padding: 0;
+  border-color: rgba(255, 255, 255, 0.24);
+  background: rgba(4, 14, 13, 0.82);
+  color: #f8fff7;
+  font-size: 1rem;
+  backdrop-filter: blur(14px);
+}
+
+.map-controls .optimize-button {
+  width: 72px;
+  height: 40px;
+  margin-left: -24px;
+  border-color: rgba(174, 255, 78, 0.52);
+  background:
+    linear-gradient(135deg, rgba(174, 255, 78, 0.18), rgba(74, 201, 183, 0.22)),
+    rgba(4, 14, 13, 0.9);
+  color: #f8fff7;
+  font-size: 0.66rem;
+  text-transform: uppercase;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.14),
+    0 10px 28px rgba(0, 0, 0, 0.28);
+}
+
+.map-controls .optimize-button.is-running {
+  border-color: rgba(255, 244, 196, 0.78);
+  background:
+    linear-gradient(135deg, rgba(255, 244, 196, 0.26), rgba(74, 201, 183, 0.28)),
+    rgba(4, 14, 13, 0.95);
+  cursor: progress;
+}
+
+.map-controls .optimize-button:disabled {
+  opacity: 0.82;
+}
+
+.map-hint {
+  position: fixed;
+  left: 18px;
+  bottom: 18px;
+  z-index: 5;
+  width: min(330px, calc(100vw - 36px));
+  border: 1px solid rgba(174, 255, 78, 0.18);
+  border-radius: 8px;
+  padding: 10px 12px;
+  background: rgba(3, 11, 10, 0.7);
+  backdrop-filter: blur(16px);
+  color: rgba(235, 255, 244, 0.76);
+  font-size: 0.76rem;
+  line-height: 1.35;
+}
+
+.progress-card {
+  position: fixed;
+  left: 18px;
+  bottom: 18px;
+  z-index: 5;
+  display: grid;
+  gap: 4px;
+  width: min(310px, calc(100vw - 36px));
+  max-height: min(28vh, 225px);
+  overflow: auto;
+  border: 1px solid rgba(174, 255, 78, 0.2);
+  border-radius: 8px;
+  padding: 7px 8px;
+  background: rgba(3, 11, 10, 0.76);
+  box-shadow: 0 20px 55px rgba(0, 0, 0, 0.34);
+  backdrop-filter: blur(16px);
+  color: rgba(235, 255, 244, 0.8);
+  font-size: 0.59rem;
+  line-height: 1.16;
+}
+
+.progress-card b {
+  color: #f8fff7;
+  font-size: 0.62rem;
+  text-transform: uppercase;
+}
+
+.progress-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.progress-toggle {
+  min-height: 28px;
+  padding: 4px 8px;
+  font-size: 0.58rem;
+}
+
+#progressCompactSummary {
+  color: rgba(235, 255, 244, 0.82);
+  font-size: 0.62rem;
+  font-weight: 800;
+  line-height: 1.25;
+}
+
+.progress-card.is-collapsed {
+  width: min(236px, calc(100vw - 36px));
+  max-height: none;
+  overflow: hidden;
+}
+
+.progress-card.is-collapsed .progress-grid,
+.progress-card.is-collapsed #productionPackage,
+.progress-card.is-collapsed #optimizeStatusLine,
+.progress-card.is-collapsed #latestBuildZones,
+.progress-card.is-collapsed #publishChecklist,
+.progress-card.is-collapsed #optimizeDirective {
+  display: none;
+}
+
+#progressSummary,
+#progressApproval {
+  display: none;
+}
+
+.progress-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 4px;
+}
+
+.progress-grid span {
+  min-width: 0;
+  border-radius: 6px;
+  padding: 4px;
+  background: rgba(255, 255, 255, 0.07);
+}
+
+.progress-grid em {
+  display: block;
+  color: rgba(166, 244, 222, 0.9);
+  font-style: normal;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.progress-grid strong,
+#productionPackage,
+#publishChecklist,
+#latestBuildZones,
+#optimizeDirective {
+  display: block;
+  overflow-wrap: anywhere;
+  white-space: normal;
+}
+
+#publishChecklist {
+  color: rgba(166, 244, 222, 0.9);
+  font-size: 0.56rem;
+  font-weight: 800;
+}
+
+#productionPackage {
+  color: rgba(235, 255, 244, 0.78);
+  line-height: 1.22;
+}
+
+#optimizeStatusLine {
+  color: rgba(255, 244, 196, 0.9);
+  font-size: 0.58rem;
+  font-weight: 800;
+  line-height: 1.22;
+}
+
+#latestBuildZones {
+  color: rgba(174, 255, 78, 0.9);
+  font-size: 0.58rem;
+  font-weight: 900;
+  line-height: 1.22;
+}
+
+#optimizeDirective {
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 0.56rem;
+  line-height: 1.22;
+}
+
+.optimize-radar-marker {
+  position: fixed;
+  z-index: 4;
+  width: 18px;
+  height: 18px;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  filter: drop-shadow(0 0 14px rgba(174, 255, 78, 0.78));
+}
+
+.optimize-radar-marker::before,
+.optimize-radar-marker::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  border-radius: 999px;
+  transform: translate(-50%, -50%);
+}
+
+.optimize-radar-marker::before {
+  width: 20px;
+  height: 20px;
+  border: 2px solid rgba(174, 255, 78, 0.86);
+  background: rgba(174, 255, 78, 0.14);
+  animation: optimizeRadarPulse 1.25s ease-out infinite;
+}
+
+.optimize-radar-marker::after {
+  width: 8px;
+  height: 8px;
+  border: 1px solid rgba(248, 255, 247, 0.88);
+  background: #aefe4e;
+  box-shadow:
+    0 0 0 5px rgba(174, 255, 78, 0.2),
+    0 0 24px rgba(174, 255, 78, 0.9);
+}
+
+.optimize-radar-marker.is-complete::before {
+  border-color: rgba(174, 255, 78, 0.7);
+  animation-duration: 1.7s;
+}
+
+.optimize-radar-label {
+  position: absolute;
+  left: 14px;
+  top: -12px;
+  min-width: max-content;
+  border: 1px solid rgba(174, 255, 78, 0.36);
+  border-radius: 999px;
+  padding: 3px 7px;
+  background: rgba(3, 11, 10, 0.82);
+  color: #f8fff7;
+  font-size: 0.56rem;
+  font-weight: 900;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.28);
+  backdrop-filter: blur(10px);
+}
+
+@keyframes optimizeRadarPulse {
+  0% {
+    opacity: 0.92;
+    transform: translate(-50%, -50%) scale(0.75);
+  }
+  70% {
+    opacity: 0.22;
+    transform: translate(-50%, -50%) scale(3.4);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(4.2);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .optimize-radar-marker::before {
+    animation: none;
+    opacity: 0.5;
+    transform: translate(-50%, -50%) scale(1.4);
+  }
+}
+
+@media (max-width: 720px) {
+  .mock-panel {
+    left: 10px;
+    top: 10px;
+    gap: 4px;
+    width: min(218px, calc(100vw - 72px));
+    padding: 7px 8px;
+  }
+
+  .mock-panel p {
+    display: none;
+  }
+
+  .mock-panel strong {
+    font-size: 0.72rem;
+    line-height: 1.15;
+  }
+
+  .src-skin-badge {
+    min-height: 21px;
+    padding: 3px 6px;
+    font-size: 0.56rem;
+  }
+
+  .mock-actions {
+    margin-top: 1px;
+  }
+
+  .mock-actions button {
+    min-height: 30px;
+    padding: 6px 9px;
+    font-size: 0.62rem;
+  }
+
+  .location-card {
+    right: 8px;
+    bottom: 8px;
+    width: min(246px, calc(100vw - 88px));
+    padding: 7px 8px;
+  }
+
+  .map-controls {
+    right: 8px;
+    top: auto;
+    bottom: 92px;
+    gap: 6px;
+    width: 44px;
+  }
+
+  .map-controls button {
+    width: 44px;
+    height: 42px;
+  }
+
+  .map-controls .optimize-button {
+    width: 68px;
+    margin-left: -24px;
+  }
+
+  .map-hint {
+    display: none;
+  }
+
+  .progress-card {
+    left: 10px;
+    right: auto;
+    bottom: 82px;
+    width: min(252px, calc(100vw - 82px));
+    max-height: 34vh;
+    transform: none;
+  }
+
+  .progress-card.is-collapsed {
+    width: min(220px, calc(100vw - 82px));
+  }
+}

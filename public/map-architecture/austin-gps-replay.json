@@ -1,0 +1,13 @@
+{
+  "name": "SimpleRides downtown Austin GPS replay",
+  "points": [
+    { "longitude": -97.74405, "latitude": 30.26472, "accuracy": 7, "heading": 16, "speed": 8.2, "offsetMs": 0 },
+    { "longitude": -97.74392, "latitude": 30.26518, "accuracy": 6, "heading": 15, "speed": 8.5, "offsetMs": 1000 },
+    { "longitude": -97.74378, "latitude": 30.26567, "accuracy": 6, "heading": 14, "speed": 8.8, "offsetMs": 2000 },
+    { "longitude": -97.74365, "latitude": 30.26613, "accuracy": 5, "heading": 14, "speed": 8.4, "offsetMs": 3000 },
+    { "longitude": -97.74352, "latitude": 30.26658, "accuracy": 6, "heading": 13, "speed": 7.9, "offsetMs": 4000 },
+    { "longitude": -97.74338, "latitude": 30.26702, "accuracy": 7, "heading": 14, "speed": 7.7, "offsetMs": 5000 },
+    { "longitude": -97.74324, "latitude": 30.26746, "accuracy": 6, "heading": 15, "speed": 8.1, "offsetMs": 6000 },
+    { "longitude": -97.74309, "latitude": 30.26791, "accuracy": 5, "heading": 16, "speed": 8.5, "offsetMs": 7000 }
+  ]
+}
