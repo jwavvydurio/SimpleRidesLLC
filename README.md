@@ -4,6 +4,18 @@ An independent mobility-product prototype designed around weekly vehicle access,
 
 This public repository is a recruiter-friendly showcase. It contains selected front-end and map-architecture work from the larger private application while intentionally excluding credentials, customer information, payment configuration, private business records, and production infrastructure.
 
+## Live domain interface
+
+The customer-facing experience is available at [simpleridesllc.com](https://simpleridesllc.com/). It guides a renter from fleet selection through verification and owner approval, with responsive wallet, marketplace, rewards, and checkout surfaces.
+
+![SimpleRidesLLC customer fleet interface](docs/images/domain-customer-interface.png)
+
+### Mobile verification flow
+
+![SimpleRidesLLC mobile verification interface](docs/images/domain-customer-mobile.png)
+
+See [DOMAIN_INTERFACE.md](DOMAIN_INTERFACE.md) for the public customer journey and portfolio scope. Owner sessions, customer records, registrar settings, and production credentials are intentionally excluded.
+
 ## Latest interface
 
 The current interface presents the SimpleRides product as an interactive neighborhood. Drivers, fleet access, verification, rewards, marketplace tools, and owner operations become visible destinations instead of disconnected dashboard pages.
@@ -55,6 +67,7 @@ VITE_MAPBOX_TOKEN=your_public_mapbox_token
 
 Then explore:
 
+- `https://simpleridesllc.com/` - live customer-facing domain interface
 - `http://localhost:5173/` - showcase index
 - `http://localhost:5173/demo/` - neighborhood interface
 - `http://localhost:5173/map-architecture-mock.html` - Austin map architecture
